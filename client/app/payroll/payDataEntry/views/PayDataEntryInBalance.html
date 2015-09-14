@@ -1,0 +1,262 @@
+<div>
+
+  <h3>Pay Data Entry</h3>
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- PAY GROUP -->
+      <div class="col-md-3 form-group">
+        <label>payGroup</label>
+        <p>DPD</p>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <label >Description</label>
+        <p>DPD Test</p>
+      </div>
+
+
+      <div class="col-md-3 form-group">
+        <label >Company</label>
+        <p>Consumer Product</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- PAY GROUP -->
+      <div class="col-md-3 form-group">
+        <label>Batch ID</label>
+        <p>DPD</p>
+      </div>
+
+      <div class="col-md-3 form-group">
+        <label >Grid</label>
+        <p>DPD Test</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12 form-group">
+        <div class="col-md-1 ">
+          <label >Include</label>
+          <p>Yes</p>
+        </div>
+        <div class="col-md-1">
+          <label >Retain</label>
+          <p>No</p>
+        </div>
+        <div class="col-md-1 ">
+          <label >Restrict</label>
+          <p>No</p>
+        </div>
+
+      </div>
+
+  </div>
+
+  <!--Hours and Earnings-->
+
+  <button ng-click="showHoursEarnings()">Hours/Earnings</button>
+    <div ng-if="hoursEarningsShow">
+      <span><strong>Hours</strong></span>
+
+      <table class="table table-hover table-responsive">
+        <thead>
+        <tr>
+          <th></th>
+          <th>CALCULATED</th>
+          <th>YOUR TOTAL</th>
+          <th>DIFFERENCE</th>
+        </tr>
+        <tr>
+          <td>Regular</td>
+          <td>0.00</td>
+          <td><input type="textbox"/></td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>Overtime</td>
+          <td>0.00</td>
+          <td><input type="textbox"/></td>
+          <td>0.00</td>
+        </tr>
+        <tr>
+          <td>Other</td>
+          <td>0.00</td>
+          <td><input type="textbox"/></td>
+          <td>0.00</td>
+        </tr>
+        </thead>
+      </table>
+    <span><strong>Earnings</strong></span>
+
+    <table class="table table-hover table-responsive">
+      <thead>
+      <tr>
+        <th></th>
+        <th>CALCULATED</th>
+        <th>YOUR TOTAL</th>
+        <th>DIFFERENCE</th>
+      </tr>
+      <tr>
+        <td>Regular</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      <tr>
+        <td>Overtime</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      </thead>
+    </table>
+</div>
+
+  <!--Taxes-->
+
+<div>
+  <button ng-click="showTaxes()">Taxes</button>
+  <div ng-if="taxesShow">
+  <span><strong>Taxes</strong></span>
+
+  <table class="table table-hover table-responsive">
+
+    <tr>
+      <th></th>
+      <th>CALCULATED</th>
+      <th>YOUR TOTAL</th>
+      <th>DIFFERENCE</th>
+    </tr>
+    <tr>
+      <td>Federal</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Social Security</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Medicare</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Medicare Surtax</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>State 2</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Local</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Local 2</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>SUI/SDI</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Local Services</td>
+      <td>0.00</td>
+      <td><input type="textbox"/></td>
+      <td>0.00</td>
+    </tr>
+  </table>
+
+</div>
+</div>
+
+  <!--Miscellaneous-->
+<div>
+  <button ng-click="showMiscellaneous()">Miscellaneous</button>
+  <div ng-if="miscellaneousShow">
+    <span><strong>Miscellaneous</strong></span>
+
+    <table class="table table-hover table-responsive">
+      <thead>
+      <tr>
+        <th></th>
+        <th>CALCULATED</th>
+        <th>YOUR TOTAL</th>
+        <th>DIFFERENCE</th>
+      </tr>
+      <tr>
+        <td>Memo Entries</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      <tr>
+        <td>One Time Deductions</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      <tr>
+        <td>Override Deductions</td>
+        <td>0.00</td>
+        <td><input type="textbox"/></td>
+        <td>0.00</td>
+      </tr>
+      </thead>
+    </table>
+
+</div>
+  </div>
+
+
+  <div class="col-md-12" style="margin-top:10px">
+
+    <a ui-sref="NavPage.PayDataEntry.PayDataEntryPayGroupDetails" class="btn btn-primary pull-right"
+       style="color:#333;border-radius:65px;text-decoration:none !important">Save</a>
+
+    <a ui-sref="NavPage.PayDataEntry.PayDataEntryPayGroupDetails" class="btn btn-default pull-right"
+       style="color:#333;border-radius:65px;text-decoration:none !important">Auto Balance</a>
+
+    <a ui-sref="NavPage.PayDataEntry.PayDataEntryPayGroupDetails" class="btn btn-default pull-right"
+       style="color:#333;border-radius:65px;text-decoration:none !important">Cancel</a>
+
+    <a ui-sref="NavPage.PayDataEntry.PayDataEntryPayGroupDetails" class="btn btn-default pull-right"
+       style="color:#333;border-radius:65px;text-decoration:none !important">Return To Pay Data Batch</a>
+
+  </div>
+
+  </div>
+

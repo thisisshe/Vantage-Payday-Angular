@@ -1,0 +1,97 @@
+<div ng-controller="PayDataEntryPayGroupDetailsCtrl" ui-view="">
+<h3> Pay Data Entry</h3>
+
+<section>
+  <header>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- PAY GROUP -->
+        <div class="col-md-3 form-group">
+          <label for="payDataGroup">payGroup</label>
+          <p id="payDataGroup">DPD</p>
+        </div>
+        <!-- PAY DESCRIPTION -->
+        <div class="col-md-3">
+          <label for="payDataDescription">Description</label>
+          <p id="payDataDescription">dsfdsfdfdsdf</p>
+        </div>
+        <!-- COMPANY -->
+        <div class="col-md-3">
+          <label for="payDataCompany">Company</label>
+          <p id="payDataCompany">South</p>
+        </div>
+        <!-- STATUS -->
+        <div class="col-md-3">
+          <label for="payDataStatus">Status</label>
+          <p id="payDataStatus">Active</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form name="payDataPayGroupDetails.payDataEntryPayGroupForm.payDataEntryPayGroupForm" novalidate>
+        <div>
+          <div class="col-md-12">
+            <!-- NAME -->
+            <div class="col-md-3 form-group">
+              <label for="payDataPayGroupName">Name</label>
+              <input type="text" id="payDataPayGroupName" name="payDataPayGroupName"
+                     class="form-control" ng-model="payDataPayGroupDetails.payDataPayGroupFilter.payDataPayGroupName">
+            </div>
+            <!-- FILE NUMBER -->
+            <div class="col-md-3">
+              <label for="payDataPayGroupFileNumber">File Number</label>
+              <input type="text" id="payDataPayGroupFileNumber" name="payDataPayGroupFileNumber"
+                     class="form-control" ng-model="payDataPayGroupDetails.payDataPayGroupFilter.payDataPayGroupFileNumber">
+            </div>
+            <!-- EMPLOYEE ID -->
+            <div class="col-md-3">
+              <label for="payDataPayGroupEmployeeID">Employee ID</label>
+              <input type="text" id="payDataPayGroupEmployeeID" name="payDataPayGroupEmployeeID"
+                     class="form-control" ng-model="payDataPayGroupDetails.payDataPayGroupFilter.payDataPayGroupEmployeeID">
+            </div>
+            <div class="col-md-3" style="margin-top:25px">
+              <button type="submit" class="btn btn-primary"
+                      ng-click="payDataPayGroupDetails.filterGrid(payDataPayGroupDetails.payDataPayGroupFilter)">Filter</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </header>
+  <hr class="break">
+
+
+  <P>All batches display initially for the pay group. To view or change a batch, click the batch ID. To search batches for a specific employee, enter one or more search values.</P>
+  <div class="section-body col-md-12">
+    <table class="table table-hover table-responsive">
+      <thead>
+      <tr>
+        <th>DELETE</th>
+        <th>BATCH ID</th>
+        <th>OWNER</th>
+        <th>STATUS</th>
+        <th>Batch Options</th>
+      </tr>
+      </thead>
+      <tr ng-repeat="item in PayDataEntryPayGroupDetails">
+        <td> <input type="checkbox"/></td>
+        <td><a href="">{{item.BatchID}}</a></td>
+        <td>{{item.Owner}}</td>
+        <td> <span ui-sref=".PayDataEntryInBalance"> <a href="">{{item.Status}}</a></span></td>
+        <td><a href="">{{item.BatchOptions}}</a></td>
+      </tr>
+    </table>
+  </div>
+  <hr class="break">
+  <footer>
+    <div class="">
+      <div>
+        <div class="col-md-12" style="margin-top:10px">
+          <a ui-sref="payDataEntryAbstract.payDataEntryhome" class="btn btn-default pull-right"
+             style="color:#333;border-radius:65px;text-decoration:none !important">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+</div>

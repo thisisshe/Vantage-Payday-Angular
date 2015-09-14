@@ -1,0 +1,40 @@
+.revolution .dojoxPortletContentOuter{
+	overflow-x: hidden;
+}
+#payRollApp{
+	padding: 0 15px;
+}
+#payRollAppHeader ul{
+	list-style:none;
+	width:100%;
+	margin:auto
+}
+#payRollAppHeader ul li{
+	margin-left: 8%
+}
+#payRollAppHeader ul li label{
+	font-weight: 800;
+	color: #000;
+	font-size: 1em;
+	margin-bottom: 16px
+}
+#payRollAppHeader p{
+	margin-top: 1em;
+}
+.ng-invalid{
+	border: 1px solid #FF0000;
+}
+.content-body{
+
+}
+.grid {
+  	width: 1170px;
+  	height: 320px;
+}
+.ui-grid-pager-container,
+.ui-grid-pager-control{
+	float: right;
+}
+.ui-grid-pager-count-container{
+	display: none;
+}

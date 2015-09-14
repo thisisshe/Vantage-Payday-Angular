@@ -1,0 +1,58 @@
+<div ng-app="PayCycleProcessingHomeCtrl">
+<div>
+
+  <h3> Pay Cycle Processing</h3>
+
+  <div class="row">
+    <div class="col-md-3">
+      <label>Group Type</label>
+      <input type="text"  />
+    </div>
+
+    <div class="col-md-3">
+      <label >Group Name</label>
+      <input type="text"  />
+    </div>
+
+
+  <div class="col-md-3">
+    <label >Description</label>
+    <input type="text"  />
+  </div>
+    </div>
+
+
+
+
+  <div class="row">
+    <label>Search</label>
+    <input type="text" ng-model="search"/>
+  </div>
+
+  <div class="row vantageRowContainer">
+    All existing pay groups display initially. To filter your results, enter one or more search values. To view and process a payroll, click a group name.
+  </div>
+
+  <div class="container">
+
+    <table class="table table-hover table-responsive">
+      <thead>
+      <tr>
+        <th>GROUP NAME</th>
+        <th>DESCRIPTION</th>
+        <th>GROUP TYPE</th>
+      </tr>
+      </thead>
+      <tr ng-repeat="data in PayCycleProcessingGrid ">
+        <td><a href="">{{data.GroupName}} </a></td>
+        <td>{{data.Description}}</td>
+        <td>{{data.GroupType}}</td>
+      </tr>
+    </table>
+
+    <!--<span ui-sref=".PayDataEntryPayGroupDetails"> <a href=""> test route</a></span>-->
+
+
+  </div>
+
+</div>
